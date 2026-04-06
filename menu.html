@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menú completo de El Banquito – Cafés, bocadillos salados y dulces.">
+    <title>Menú – El Banquito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <span class="brand-icon">☕</span> El Banquito
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar-nav" id="navbar-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="menu.html" class="active">Menú</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li class="nav-cta"><a href="menu.html">Ordenar ahora</a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> / Menú
+        </div>
+        <h1>Nuestro Menú</h1>
+        <p>Selecciona tus productos favoritos y agrégalos al carrito.</p>
+    </div>
+
+    <!-- MENU + CART LAYOUT -->
+    <section class="section">
+        <div class="menu-layout">
+
+            <!-- LEFT: Menu Categories -->
+            <div class="menu-categories">
+
+                <!-- ☕ Cafés -->
+                <div class="menu-category-card fade-up">
+                    <h3><span class="cat-icon">☕</span> Cafés</h3>
+                    <div class="menu-items-grid">
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Espresso.jpeg" alt="Espresso">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Espresso</span>
+                                <span class="menu-item-price">RD$90</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Espresso" data-price="90" aria-label="Agregar Espresso">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Cafe americano ( o cafe negro).jpeg" alt="Café Americano">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Café Americano</span>
+                                <span class="menu-item-price">RD$100</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Café Americano" data-price="100" aria-label="Agregar Café Americano">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Cappuccino.jpeg" alt="Cappuccino">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Cappuccino</span>
+                                <span class="menu-item-price">RD$140</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Cappuccino" data-price="140" aria-label="Agregar Cappuccino">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Latte.jpeg" alt="Latte">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Latte</span>
+                                <span class="menu-item-price">RD$150</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Latte" data-price="150" aria-label="Agregar Latte">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Mocaccino.jpeg" alt="Mocaccino">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Mocaccino</span>
+                                <span class="menu-item-price">RD$160</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Mocaccino" data-price="160" aria-label="Agregar Mocaccino">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Cafe frio.jpeg" alt="Café Frío Iced Coffee">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Café Frío (Iced Coffee)</span>
+                                <span class="menu-item-price">RD$150</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Café Frío (Iced Coffee)" data-price="150" aria-label="Agregar Café Frío">+</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 🥪 Bocadillos Salados -->
+                <div class="menu-category-card fade-up">
+                    <h3><span class="cat-icon">🥪</span> Bocadillos Salados</h3>
+                    <div class="menu-items-grid">
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Tostada de jamon y queso.jpeg" alt="Mini Sándwich de Jamón y Queso">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Mini Sándwich de Jamón y Queso</span>
+                                <span class="menu-item-price">RD$120</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Mini Sándwich de Jamón y Queso" data-price="120" aria-label="Agregar Mini Sándwich">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Croissant de jamon y queso.jpeg" alt="Croissant de Jamón y Queso">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Croissant de Jamón y Queso</span>
+                                <span class="menu-item-price">RD$150</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Croissant de Jamón y Queso" data-price="150" aria-label="Agregar Croissant">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Panini CCaprese.jpeg" alt="Panini Caprese">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Panini Caprese</span>
+                                <span class="menu-item-price">RD$180</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Panini Caprese" data-price="180" aria-label="Agregar Panini Caprese">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Tostadas de aguacate.jpeg" alt="Tostada con Aguacate">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Tostada con Aguacate</span>
+                                <span class="menu-item-price">RD$140</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Tostada con Aguacate" data-price="140" aria-label="Agregar Tostada con Aguacate">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Empanaditas.jpeg" alt="Empanaditas Pequeñas">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Empanaditas Pequeñas</span>
+                                <span class="menu-item-price">RD$70</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Empanaditas Pequeñas" data-price="70" aria-label="Agregar Empanaditas">+</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 🍰 Bocadillos Dulces -->
+                <div class="menu-category-card fade-up">
+                    <h3><span class="cat-icon">🍰</span> Bocadillos Dulces</h3>
+                    <div class="menu-items-grid">
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Brownies.jpeg" alt="Brownie">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Brownie</span>
+                                <span class="menu-item-price">RD$100</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Brownie" data-price="100" aria-label="Agregar Brownie">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Mini cheescake.jpeg" alt="Mini Cheesecake">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Mini Cheesecake</span>
+                                <span class="menu-item-price">RD$160</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Mini Cheesecake" data-price="160" aria-label="Agregar Mini Cheesecake">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Galletas con chispas de chocolate.jpeg" alt="Galleta con Chispas de Chocolate">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Galleta con Chispas de Chocolate</span>
+                                <span class="menu-item-price">RD$80</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Galleta con Chispas de Chocolate" data-price="80" aria-label="Agregar Galleta">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Pastel de vainilla.jpeg" alt="Rebanada de Bizcocho de Vainilla">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Rebanada de Bizcocho de Vainilla</span>
+                                <span class="menu-item-price">RD$120</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Rebanada de Bizcocho de Vainilla" data-price="120" aria-label="Agregar Bizcocho">+</button>
+                        </div>
+
+                        <div class="menu-product-card">
+                            <div class="menu-product-img-wrap">
+                                <img src="Imagen/Carlota de limon.jpeg" alt="Carlota de Limón en Vasito">
+                            </div>
+                            <div class="menu-product-info">
+                                <span class="menu-item-name">Carlota de Limón en Vasito</span>
+                                <span class="menu-item-price">RD$130</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Carlota de Limón en Vasito" data-price="130" aria-label="Agregar Carlota">+</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div><!-- /menu-categories -->
+
+            <!-- RIGHT: Shopping Cart -->
+            <div class="cart-panel" id="cart-panel">
+                <div class="cart-header">
+                    <h3>🛒 Tu Pedido</h3>
+                    <div class="cart-count-badge" id="cart-count">0</div>
+                </div>
+                <div class="cart-body" id="cart-body">
+                    <div class="cart-empty" id="cart-empty">
+                        <div class="empty-icon">🛒</div>
+                        <p>Aún no has agregado productos.<br>¡Elige algo del menú!</p>
+                    </div>
+                    <div id="cart-items"></div>
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-total-row">
+                        <span class="cart-total-label">Total a pagar:</span>
+                        <span class="cart-total-amount" id="cart-total">RD$0.00</span>
+                    </div>
+                    <button id="checkout-btn" class="btn btn-primary cart-checkout-btn"
+                            onclick="goToCheckout()" disabled>
+                        Ir a Facturación →
+                    </button>
+                </div>
+            </div>
+
+        </div><!-- /menu-layout -->
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>☕ El Banquito</h3>
+                <p>Un café temático escolar creado con amor por los estudiantes de 6to A.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Páginas</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="experiencia.html">Experiencia</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Menú</h4>
+                <ul>
+                    <li><a href="menu.html">Cafés</a></li>
+                    <li><a href="menu.html">Bocadillos Salados</a></li>
+                    <li><a href="menu.html">Bocadillos Dulces</a></li>
+                    <li><a href="facturacion.html">Facturación</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 El Banquito. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

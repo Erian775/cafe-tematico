@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Facturación – El Banquito Café Temático. Completa tu pedido.">
+    <title>Facturación – El Banquito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <span class="brand-icon">☕</span> El Banquito
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar-nav" id="navbar-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li class="nav-cta"><a href="menu.html">← Volver al Menú</a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> / <a href="menu.html">Menú</a> / Facturación
+        </div>
+        <h1>Facturación</h1>
+        <p>Revisa tu pedido y completa tus datos para confirmar.</p>
+    </div>
+
+    <!-- BILLING SECTION -->
+    <section class="section">
+        <div id="empty-cart-notice" style="display:none; text-align:center; padding:3rem; max-width:480px; margin:0 auto;">
+            <div style="font-size:3rem; margin-bottom:1rem;">🛒</div>
+            <h2 style="margin-bottom:0.8rem;">Tu carrito está vacío</h2>
+            <p style="color:var(--text-muted); margin-bottom:2rem;">Parece que aún no has agregado productos a tu pedido. ¡Ve al menú y elige algo!</p>
+            <a href="menu.html" class="btn btn-primary">Ir al Menú</a>
+        </div>
+
+        <div class="billing-layout" id="billing-layout">
+            <!-- LEFT: Order Summary + Form -->
+            <div>
+                <!-- Order Summary -->
+                <div class="billing-card" style="margin-bottom:2rem;">
+                    <div class="billing-card-header">
+                        <h2>📋 Resumen del Pedido</h2>
+                        <p>Estos son los productos que seleccionaste</p>
+                    </div>
+                    <div class="billing-card-body">
+                        <div id="order-summary-items">
+                            <!-- filled by JS -->
+                        </div>
+                        <div class="order-total-row">
+                            <span class="order-total-label">Total a pagar:</span>
+                            <span class="order-total-value" id="order-total">RD$0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Form -->
+                <div class="billing-card">
+                    <div class="billing-card-header">
+                        <h2>👤 Tus Datos</h2>
+                        <p>Completa el formulario para confirmar tu pedido</p>
+                    </div>
+                    <div class="billing-card-body">
+                        <form id="billing-form" onsubmit="confirmOrder(event)">
+                            <div class="form-group">
+                                <label for="bill-name">Nombre completo *</label>
+                                <input type="text" id="bill-name" class="form-control" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bill-phone">Teléfono *</label>
+                                <input type="tel" id="bill-phone" class="form-control" placeholder="+1 (809) 000-0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Método de Pago *</label>
+                                <div class="payment-method-grid">
+                                    <div class="payment-option">
+                                        <input type="radio" name="payment" id="pay-cash" value="Efectivo" checked>
+                                        <label for="pay-cash">
+                                            <span class="pay-icon">💵</span> Efectivo
+                                        </label>
+                                    </div>
+                                    <div class="payment-option">
+                                        <input type="radio" name="payment" id="pay-card" value="Tarjeta">
+                                        <label for="pay-card">
+                                            <span class="pay-icon">💳</span> Tarjeta
+                                        </label>
+                                    </div>
+                                    <div class="payment-option">
+                                        <input type="radio" name="payment" id="pay-transfer" value="Transferencia">
+                                        <label for="pay-transfer">
+                                            <span class="pay-icon">📲</span> Transferencia
+                                        </label>
+                                    </div>
+                                    <div class="payment-option">
+                                        <input type="radio" name="payment" id="pay-qr" value="QR / Móvil">
+                                        <label for="pay-qr">
+                                            <span class="pay-icon">📱</span> QR / Móvil
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bill-notes">Notas adicionales (opcional)</label>
+                                <textarea id="bill-notes" class="form-control" placeholder="¿Alguna instrucción especial para tu pedido?" style="min-height:80px;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; border-radius:10px; padding:1rem; font-size:1rem;">
+                                ✅ Confirmar Pedido
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Invoice (shown after confirm) -->
+            <div>
+                <!-- Placeholder before confirm -->
+                <div id="invoice-placeholder" class="billing-card" style="text-align:center; padding:3rem 2rem;">
+                    <div style="font-size:3rem; margin-bottom:1rem; opacity:0.4;">🧾</div>
+                    <h3 style="margin-bottom:0.6rem; color:var(--text-muted);">Tu factura aparecerá aquí</h3>
+                    <p style="font-size:0.88rem; color:var(--text-muted);">Completa el formulario y confirma tu pedido para generar la factura.</p>
+                </div>
+
+                <!-- Invoice Card (generated after confirm) -->
+                <div class="invoice-card" id="invoice-card">
+                    <div class="invoice-header">
+                        <div style="font-size:2.5rem; margin-bottom:0.5rem;">☕</div>
+                        <h2>El Banquito</h2>
+                        <p>Café Temático · 6to A</p>
+                    </div>
+                    <div class="invoice-meta">
+                        <span>Factura #<span id="inv-num"></span></span>
+                        <span id="inv-date"></span>
+                    </div>
+                    <div class="invoice-body">
+                        <div id="invoice-items"></div>
+                    </div>
+                    <div class="invoice-grand-total">
+                        <span>Total:</span>
+                        <strong id="inv-total"></strong>
+                    </div>
+                    <div id="invoice-customer-info" style="padding: 1rem 2rem; border-top: 1px solid var(--beige-light); font-size:0.85rem; color:var(--text-muted);">
+                    </div>
+                    <div class="invoice-footer-note">
+                        Gracias por tu compra en El Banquito ☕<br>
+                        ¡Esperamos verte pronto!
+                    </div>
+                    <div style="text-align:center; padding:0 2rem 1.5rem;">
+                        <button onclick="printInvoice()" class="btn btn-secondary btn-sm" style="margin-right:0.5rem;">🖨️ Imprimir</button>
+                        <a href="menu.html" class="btn btn-primary btn-sm">Nuevo Pedido</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>☕ El Banquito</h3>
+                <p>Un café temático escolar creado con amor por los estudiantes de 6to A.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Páginas</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="experiencia.html">Experiencia</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Menú</h4>
+                <ul>
+                    <li><a href="menu.html">Cafés</a></li>
+                    <li><a href="menu.html">Bocadillos Salados</a></li>
+                    <li><a href="menu.html">Bocadillos Dulces</a></li>
+                    <li><a href="facturacion.html">Facturación</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 El Banquito. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

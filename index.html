@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="El Banquito – Café Temático. Disfruta del mejor café, bocadillos y una experiencia única.">
+    <title>El Banquito – Café Temático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <span class="brand-icon">☕</span> El Banquito
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar-nav" id="navbar-nav">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li class="nav-cta"><a href="menu.html">Ordenar ahora</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">☕ Café Temático Escolar &middot;</div>
+            <h1 id="dynamic-welcome">¡Bienvenido a<br><span>El Banquito!</span></h1>
+            <p class="hero-desc">
+                Disfruta del mejor ambiente y sabor en nuestro café temático, preparado con mucho cariño y dedicación
+                para ofrecerte una experiencia única.
+            </p>
+            <div class="hero-actions">
+                <a href="menu.html" class="btn btn-accent">Ver Menú → </a>
+                <a href="nosotros.html" class="btn btn-secondary"
+                    style="border-color:rgba(255,255,255,0.5); color:#fff;">Conoce más</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-num">16+</div>
+                    <div class="stat-label">Productos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Hecho con amor</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Imagen/WhatsApp Image 2026-03-03 at 1.02.29 AM.jpeg" alt="El Banquito Café Temático">
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="section">
+        <div class="section-header fade-up">
+            <div class="section-tag">Nuestros favoritos</div>
+            <h2 class="section-title">Productos Destacados</h2>
+            <p class="section-subtitle">Los sabores más queridos por nuestros clientes, preparados con los mejores
+                ingredientes.</p>
+        </div>
+
+        <div class="cards-grid">
+            <a href="menu.html" class="product-card fade-up">
+                <div class="product-card-img-wrap">
+                    <img class="product-card-img" src="Imagen/Cappuccino.jpeg" alt="Cappuccino">
+                </div>
+                <div class="product-content">
+                    <h3>Cappuccino</h3>
+                    <p>Café espresso con leche vaporizada y abundante espuma de leche cremosa.</p>
+                    <div class="product-footer">
+                        <span class="price">RD$140</span>
+                        <span class="btn btn-primary btn-sm">Ver Menú</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="menu.html" class="product-card fade-up">
+                <div class="product-card-img-wrap">
+                    <img class="product-card-img" src="Imagen/Panini CCaprese.jpeg" alt="Panini Caprese">
+                </div>
+                <div class="product-content">
+                    <h3>Panini Caprese</h3>
+                    <p>Panini caliente con tomate fresco, mozzarella derretida y albahaca.</p>
+                    <div class="product-footer">
+                        <span class="price">RD$180</span>
+                        <span class="btn btn-primary btn-sm">Ver Menú</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="menu.html" class="product-card fade-up">
+                <div class="product-card-img-wrap">
+                    <img class="product-card-img" src="Imagen/Carlota de limon.jpeg" alt="Carlota de Limón">
+                </div>
+                <div class="product-content">
+                    <h3>Carlota de Limón</h3>
+                    <p>Postre frío y refrescante de limón en vasito. Una delicia dulce irresistible.</p>
+                    <div class="product-footer">
+                        <span class="price">RD$130</span>
+                        <span class="btn btn-primary btn-sm">Ver Menú</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section section-alt">
+        <div style="text-align:center; max-width:600px; margin:0 auto;" class="fade-up">
+            <div class="section-tag">¿Listo para ordenar?</div>
+            <h2 class="section-title">Explora nuestro menú completo</h2>
+            <p class="section-subtitle" style="margin-bottom:2rem;">
+                Cafés, bocadillos salados y dulces preparados con ingredientes frescos y mucho cariño.
+            </p>
+            <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                <a href="menu.html" class="btn btn-primary">Ver Menú Completo</a>
+                <a href="experiencia.html" class="btn btn-secondary">Nuestra Experiencia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>☕ El Banquito</h3>
+                <p>Un café temático escolar creado con amor por los estudiantes de 6to A. Nuestro objetivo es ofrecerte
+                    una experiencia única y deliciosa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Páginas</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="experiencia.html">Experiencia</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Menú</h4>
+                <ul>
+                    <li><a href="menu.html">Cafés</a></li>
+                    <li><a href="menu.html">Bocadillos Salados</a></li>
+                    <li><a href="menu.html">Bocadillos Dulces</a></li>
+                    <li><a href="facturacion.html">Facturación</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 El Banquito. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

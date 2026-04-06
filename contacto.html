@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos – El Banquito Café Temático.">
+    <title>Contacto – El Banquito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <span class="brand-icon">☕</span> El Banquito
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar-nav" id="navbar-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+            <li class="nav-cta"><a href="menu.html">Ordenar ahora</a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> / Contacto
+        </div>
+        <h1>Contáctanos</h1>
+        <p>¿Tienes alguna pregunta o sugerencia? ¡Escríbenos!</p>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+        <div class="contact-grid">
+            <!-- Info -->
+            <div class="contact-info fade-up">
+                <div class="section-tag">Información de contacto</div>
+                <h2>Estamos aquí para ayudarte</h2>
+                <p>
+                    En El Banquito valoramos cada opinión y sugerencia de nuestros clientes. Si tienes preguntas sobre el menú, quieres hacer un pedido especial o simplemente quieres saludarnos, no dudes en contactarnos.
+                </p>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">📍</div>
+                    <div class="contact-detail-text">
+                        <h4>Ubicación</h4>
+                        <p>Salón de 6to A – Proyecto Escolar</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">🕐</div>
+                    <div class="contact-detail-text">
+                        <h4>Horario</h4>
+                        <p>Lunes a Viernes · 7:00 AM – 2:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">✉️</div>
+                    <div class="contact-detail-text">
+                        <h4>Email</h4>
+                        <p>elbanquito6toa@correo.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">📱</div>
+                    <div class="contact-detail-text">
+                        <h4>WhatsApp</h4>
+                        <p>+1 (809) 000-0000</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="menu.html" class="btn btn-primary">Ver el Menú →</a>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="contact-form-card fade-up">
+                <h3>Envíanos un mensaje</h3>
+                <form id="contact-form" onsubmit="handleContactForm(event)">
+                    <div class="form-group">
+                        <label for="contact-name">Nombre completo *</label>
+                        <input type="text" id="contact-name" class="form-control" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Correo electrónico *</label>
+                        <input type="email" id="contact-email" class="form-control" placeholder="tu@correo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone">Teléfono (opcional)</label>
+                        <input type="tel" id="contact-phone" class="form-control" placeholder="+1 (809) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Asunto *</label>
+                        <select id="contact-subject" class="form-control" required>
+                            <option value="" disabled selected>Selecciona un tema</option>
+                            <option value="pedido">Pedido especial</option>
+                            <option value="info">Información del menú</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Mensaje *</label>
+                        <textarea id="contact-message" class="form-control" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; border-radius:10px;">
+                        Enviar Mensaje ✉️
+                    </button>
+                </form>
+                <div id="contact-success" style="display:none; text-align:center; padding:1.5rem; background:var(--beige-light); border-radius:10px; margin-top:1rem;">
+                    <div style="font-size:2rem; margin-bottom:0.5rem;">✅</div>
+                    <h4 style="margin-bottom:0.3rem;">¡Mensaje enviado!</h4>
+                    <p style="font-size:0.88rem; color:var(--text-muted);">Gracias por contactarnos. Te responderemos pronto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>☕ El Banquito</h3>
+                <p>Un café temático escolar creado con amor por los estudiantes de 6to A.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Páginas</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="experiencia.html">Experiencia</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Menú</h4>
+                <ul>
+                    <li><a href="menu.html">Cafés</a></li>
+                    <li><a href="menu.html">Bocadillos Salados</a></li>
+                    <li><a href="menu.html">Bocadillos Dulces</a></li>
+                    <li><a href="facturacion.html">Facturación</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 El Banquito. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
